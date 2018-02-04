@@ -31,7 +31,7 @@ function match(pattern, text) {
     }else if(pattern === "$" && text === ""){
         return true;
     }else if(pattern[1] === "?"){
-        matchQuestion(pattern, text);
+        return matchQuestion(pattern, text);
     }else if(pattern[1] === "*") {
         return matchStar(pattern, text);
     }else{

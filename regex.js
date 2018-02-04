@@ -9,11 +9,12 @@ function search(pattern, text) {
     if(pattern[0] === "^") {
         return match(pattern.slice(1), text);
     }else{
-        flag = false;
-        for(var index = 0; index < text.length; index++){
-            flag = flag || match(pattern, text.slice(index));
-        }
-        return flag;
+        // flag = false;
+        // for(var index = 0; index < text.length; index++){
+        //     flag = flag || match(pattern, text.slice(index));
+        // }
+        // return flag;
+        return match(".*" + pattern, text);
     }
 }
 
